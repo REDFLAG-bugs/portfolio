@@ -1,0 +1,397 @@
+@media screen and (max-width: 1400px) {
+    #desktop-nav {
+      display: flex;
+    }
+    #hamburger-nav {
+      display: none;
+    }
+    #profile {
+      height: 83vh;
+      margin-bottom: 6rem;
+    }
+    .about-containers {
+      flex-wrap: wrap;
+    }
+    #contact,
+    #projects {
+      height: fit-content;
+    }
+  }
+  /* Animation: Fade-in effect for the cards */
+  .experience-card {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+  }
+  
+  
+  @media screen and (max-width: 1200px) {
+  
+    .experience-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #desktop-nav {
+      display: flex;
+    }
+    #hamburger-nav {
+      display: none;
+    }
+   
+    #profile,
+    .section-container {
+      display: grid;
+    }
+    .arrow {
+      display: block;
+    }
+    section,
+    .section-container {
+      height: fit-content;
+    }
+    section {
+      margin: 0 5%;
+    }
+    .section__pic-container {
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
+    }
+    .about-containers {
+      margin-top: 0;
+    }
+  }
+  /* mobile */
+  @media screen and (max-width: 600px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+    #contact,
+    footer {
+      height: 40vh;
+    }
+    #profile {
+      height: 83vh;
+      margin-bottom: 0;
+    }
+    article {
+      font-size: 1rem;
+    }
+    footer nav {
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+      flex-wrap: wrap;
+    }
+    .contact-info-container {
+      margin: 0;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+      font-size: 1rem;
+    }
+    .experience-grid {
+      grid-template-columns: 1fr; }
+  
+    .logo {
+      font-size: 1.5rem;
+    }
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    #profile {
+      grid-template-columns: 1fr; /* Stack image and text */
+      padding: 1rem;
+    }
+  
+    .section__pic-container img {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .about-details-container {
+      padding: 1rem;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    #socials-container {
+      justify-content: center;
+      margin-top: 10px;
+      gap: 0.75rem;
+    }
+    .section__pic-container {
+      width: auto;
+      height: 46vw;
+      justify-content: center;
+    }
+    .section__text__p2 {
+      font-size: 1.25rem;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .text-container {
+      text-align: justify;
+    }
+  }
+  
+  /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    .experience-section h2 {
+        font-size: 1.8rem;
+    }
+  
+    .experience-card {
+        padding: 15px;
+    }
+    .blog-section {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .blog-card {
+      padding: 15px;
+    }
+  
+    .blog-title {
+      font-size: 1.3rem;
+    }
+  
+    .blog-subtitle {
+      font-size: 1rem;
+    }
+  
+    .blog-meta {
+      flex-direction: column;
+      font-size: 0.85rem;
+    }
+  
+    .load-more-btn {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+      max-width: 130px;
+    }
+  
+    #projects {
+      margin-top: 10%;
+    }
+  
+    .color-container {
+      padding: 15px;
+    }
+  
+    .project-img {
+      width: 70%;
+      height: auto;
+    }
+  
+    .project-title {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .modal-content-project {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .modal-content-project h3 {
+      font-size: 24px;
+    }
+  
+    .modal-content-project .descriptionn {
+      padding: 4%;
+    }
+  
+    .icon-movie {
+      width: 35px;
+    }
+  
+    #about {
+      padding: 3rem;
+      margin: 0 2rem;
+    }
+  
+    .about-containers {
+      flex-direction: column;
+    }
+  
+    .about-details-container {
+      padding: 20px;
+    }
+  
+    .text-container {
+      max-width: 90%;
+      margin: auto;
+      padding: 15px;
+    }
+  
+    .text-container p {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .experience-section h2 {
+        font-size: 1.5rem;
+    }
+  
+    .experience-card h3 {
+        font-size: 1.2rem;
+    }
+  
+    .experience-card p {
+        font-size: 0.9rem;
+    }
+    #profile {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .section__text {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    #profile {
+      grid-template-columns: 1fr; /* Stack image and text */
+      padding: 2rem;
+    }
+  
+    .section__pic-container img {
+      width: 230px;
+      height: 230px;
+    }
+  
+    .section__text__p1 {
+      font-size: 1rem;
+    }
+  
+    .section__text__p2 {
+      font-size: 1.1rem;
+    }
+  
+    .title {
+      font-size: 2.2rem;
+    }
+  
+    #socials-container {
+      justify-content: center;
+    }
+  
+    .blog-section {
+      max-width: 95%;
+      padding: 10px;
+    }
+  
+    .blog-card {
+      padding: 10px;
+    }
+  
+    .blog-title {
+      font-size: 1.2rem;
+    }
+  
+    .blog-subtitle {
+      font-size: 0.95rem;
+    }
+  
+    .blog-meta {
+      flex-direction: column;
+      font-size: 0.8rem;
+      gap: 10px;
+    }
+  
+    .load-more-btn {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+      max-width: 120px;
+    }
+    #projects {
+      margin-top: 8%;
+    }
+  
+    .color-container {
+      padding: 10px;
+    }
+  
+    .project-img {
+      width: 80%;
+      height: auto;
+    }
+  
+    .project-title {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .modal-content-project {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    .modal-content-project h3 {
+      font-size: 20px;
+    }
+  
+    .modal-content-project .descriptionn {
+      padding: 3%;
+    }
+  
+    .icon-movie {
+      width: 30px;
+    }
+  
+    #about {
+      padding: 2rem;
+      margin: 0 1rem;
+    }
+  
+    .about-containers {
+      flex-direction: column;
+    }
+  
+    .about-details-container {
+      padding: 10px;
+    }
+  
+    .text-container {
+      max-width: 100%;
+      margin: auto;
+      padding: 10px;
+    }
+  
+    .text-container p {
+      font-size: 1.0em;
+    }
+  
+    .article-container {
+      width: 90%;  /* Reduce width for smaller screen */
+      margin: 10px auto;  /* Center the card */
+    }
+  
+    /* Responsive Design */
+  @media (max-width: 768px) {
+    .article-cont {
+        max-width: 90%;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .article-title {
+        font-size: 1.3rem;
+    }
+  }
+  }
+  
+  
+  
