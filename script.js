@@ -1,63 +1,45 @@
 function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
+    const menu = document.querySelector(".nav-links");
     menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }
-  
-  
-  // JavaScript to open and close the modal
-  document.querySelectorAll('.more-link').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const modalId = this.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-        modal.style.display = 'block';
-    });
-  });
-  
-  // Close the modal when the close button is clicked
-  document.querySelectorAll('.close-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const modal = this.closest('.modal');
-        modal.style.display = 'none';
-    });
-  });
-  
-  // Close the modal if the user clicks outside of the modal
-  window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlEl = document.documentElement;
+
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            htmlEl.setAttribute('data-theme', 'dark');
+        } else {
+            htmlEl.removeAttribute('data-theme');
+        }
+    };
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
     }
-  };
-  
-  
-  
-  // JavaScript to open and close the modal
-  document.querySelectorAll('.more-link').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const modalId = this.getAttribute('data-modal-project');
-        const modal = document.getElementById(modalId);
-        modal.style.display = 'block';
+    
+    themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = htmlEl.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
     });
-  });
-  
-  // Close the modal when the close button is clicked
-  document.querySelectorAll('.close-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const modal = this.closest('.modal-project');
-        modal.style.display = 'none';
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, {
+        threshold: 0.1 
     });
-  });
-  
-  // Close the modal if the user clicks outside of the modal
-  window.onclick = function(event) {
-    if (event.target.classList.contains('modal-project')) {
-        event.target.style.display = 'none';
-    }
-  };
-  
-  
-  
-  
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+});
