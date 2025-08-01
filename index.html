@@ -1,464 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"> <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Anshuman Mishra | AI/ML Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Anshuman Mishra</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#Education">Education</a></li>
-          <li><a href="#techstack">Techstack</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Anshuman Mishra</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#Education" onclick="toggleMenu()">Education</a></li>
-          <li><a href="#techstack" onclick="toggleMenu()">Techstack</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/portfolio-pic.jpeg" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hey there, I'm</p>
-        <h1 class="title">Anshuman Mishra</h1>
-        <p class="section__text__p2">Welcome to My Portfolio! I’m an AI and ML enthusiast passionate about building intelligent systems. Explore my projects, achievements, and experiences as I innovate at the intersection of technology and innovation.</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('assets/resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/iamanshumanmishra/'"
-            
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/REDFLAG-bugs'""
-            
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="text-container">
-            <p>Hi, I'm <strong>Anshuman Mishra</strong>, an aspiring AI and Machine Learning engineer with a passion for deep learning, automation, and software development . <br></p>
-            
-          <p>Currently graduated from Silicon University with a degree in Electrical and Electronics Engineering, I have worked on projects involving <strong>Machine Learning and cloud computing</strong>.</p>
-    
-            <p>As an intern in Squbix Digital, I specialize in:</p>
-            <ul>
-                <li>Text extraction and OCR model optimization</li>
-                <li>Fine Tuning ASR models, enhancing accuracy</li>
-                <li>Deploying and maintaining cloud infrastructure</li>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Anshuman Mishra</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle theme">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+            </div>
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile" class="container">
+            <div class="profile-text hidden">
+                <h1 class="name-title">Anshuman Mishra</h1>
+                <p class="subtitle">Project Associate at IISc Bangalore | AI/ML Researcher</p>
+                <p class="bio">
+                    Project Associate at the SPIRE Lab, IISc Bangalore, contributing to research in signal processing and machine learning. Formerly an AI Engineer Intern at Squbix Digital with a background in deep learning, cloud computing, and developing intelligent systems.
+                </p>
+                <div class="cta-buttons">
+                    <a href="assets/resume.pdf" class="btn btn-primary" target="_blank">Download CV</a>
+                    <a href="https://github.com/REDFLAG-bugs" class="btn btn-secondary" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/iamanshumanmishra/" class="btn btn-secondary" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="profile-pic-container hidden">
+                <img src="./assets/portfolio-pic.jpeg" alt="Anshuman Mishra" class="profile-pic">
+            </div>
+        </section>
+
+        <section id="about" class="container hidden">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>
+                    I am currently a Project Associate at the prestigious SPIRE Lab at IISc Bangalore, where I'm engaged in cutting-edge research in speech and signal processing. My journey into AI was solidified during my B.Tech at Silicon University and further shaped by my experience as an AI Engineer Intern at Squbix Digital, where I honed my skills in deploying and fine-tuning ASR and OCR models.
+                </p>
+                <p>
+                    I am driven by a desire to tackle complex challenges and contribute to the scientific community. My time as the AI/ML Lead for my university's GDSC chapter taught me the value of collaboration and knowledge sharing, principles I carry into my current research endeavors.
+                </p>
+            </div>
+        </section>
+
+        <section id="research-interests" class="container hidden">
+            <h2>Research Interests</h2>
+            <ul class="interests-list">
+                <li>Speech & Signal Processing</li>
+                <li>Fine-Tuning Large Language Models (LLMs)</li>
+                <li>Efficient OCR & ASR Systems</li>
+                <li>Computer Vision for Automation</li>
+                <li>Responsible AI & Model Explainability</li>
             </ul>
-    
-            <p>Beyond tech, I was a <strong> AI/ML lead</strong> of GDSC SIT-B chapter. Along with a core member of the <strong>Meta Academics Cell</strong>- the literacy club of Silicon University. </p>
-    
-            <p>I thrive on solving real-world challenges with AI and love collaborating on impactful projects. Let’s connect to innovate together!</p>
-          </div>
-        </div>
-      </div>
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      /> -->
-    </section>
+        </section>
 
-    <section id="Education">
-      <p class="section__text__p1">here is my</p>
-      <h2 class="title">Education</h2>
-      <div class="timeline">
-          <div class="entry entry-right">
-              <h3 class="institution-name">Silicon University</h3>
-              <p class="details">2021-2025</p>
-              <p class="degree">Electronics and Electronics Engineering</p>
-              <p class="details">GPA: 7.64/10</p>
-          </div>
-          <div class="entry entry-left">
-              <h3 class="institution-name">Sankalp Senior Secondary School</h3>
-              <p class="details">2018-2020</p>
-              <p class="degree">CBSE Board, PCMB</p>
-              <p class="details">XII Percentage: 74%</p>
-          </div>
-          <div class="entry entry-right">
-              <h3 class="institution-name">De Paul School</h3>
-              <p class="details">2008-2018</p>
-              <p class="degree">ICSE Board</p>
-              <p class="details">X Percentage: 69.33%</p>
-          </div>
-      </div>
-    </section>
-
-    <section id="techstack">
-      <p class="title">This is my</p>
-      <h2>Tech Stack</h2>
-      <div class="container">
-          <div class="card">
-              <img src="./assets/code-icon.png" alt="Languages Icon">
-              <h3>Languages</h3>
-              <p>Python, hcl, shell scripting</p>
-          </div>
-          <div class="card">
-              <img src="./assets/database-icon.png" alt="Database Icon">
-              <h3>Databases</h3>
-              <p>MySQL, PostgreSQL</p>
-          </div>
-          <div class="card">
-              <img src="./assets/ml-icon.png" alt="AI & ML Icon">
-              <h3>AI & Machine Learning</h3>
-              <p>TensorFlow, PyTorch, Pandas, Numpy, Matplotlib, Kaldi</p>
-              
-          </div>
-          <div class="card">
-              <img src="./assets/cloud-icon.png" alt="Cloud & DevOps Icon">
-              <h3>Cloud & DevOps</h3>
-              <p>Docker, Virtual Environments, Git, GitHub, AWS, AZURE</p>
-          </div>
-          <div class="card">
-              <img src="./assets/tools-icon.png" alt="Development Tools Icon">
-              <h3>Development Tools</h3>
-              <p>Jupyter Notebook, VS Code, Anaconda, Streamlit</p>
-          </div>
-          <div class="card">
-              <img src="./assets/design-icon.png" alt="Design & Productivity Icon">
-              <h3>Design & Productivity</h3>
-              <p>Figma, Canva, Notion</p>
-          </div>
-      </div>
-  </section>
-
-  
-  <section id="experience" class="experience-section">
-    <p class="section__text__p1">Checkout my</p>
-    <h2 class="title">Experience</h2>
-    <div class="experience-grid">
-        <div class="experience-card">
-            <h3>Squbix Digital</h3>
-            <p><strong>Company:</strong> Squbix Digital</p>
-            <p><strong>Duration:</strong> Nov 2024 – Present</p>
-            <p><strong>Role:</strong> AI Engineer Intern</p>
-            <p><strong>Location:</strong> Bhubaneshwar, Odisha</p>
-            <button class="more-link" data-modal="modal1">
-              <img src="./assets/plus.png" alt="Click here for more" />
-          </button>
-        </div>
-        
-        <div class="experience-card">
-            <h3>GDSC Silicon Chapter</h3>
-            <p><strong>Company:</strong> GDSC Silicon-B</p>
-            <p><strong>Duration:</strong> Aug 2023 – Jun 2024</p>
-            <p><strong>Role:</strong>Lead Member</p>
-            <p><strong>Location:</strong>Bhubaneshwar, Odisha</p>
-            <button class="more-link" data-modal="modal2">
-              <img src="./assets/plus.png" alt="Click here for more" />
-          </button>
-        </div>
-        
-        <div class="experience-card">
-            <h3>Meta Academics Cell</h3>
-            <p><strong>Company:</strong> Meta Academics Cell</p>
-            <p><strong>Duration:</strong> Jan 2022 – May 2025</p>
-            <p><strong>Role:</strong> Core Member</p>
-            <p><strong>Location:</strong>Bhubaneshwar, Odisha</p>
-            <button class="more-link" data-modal="modal3">
-              <img src="./assets/plus.png" alt="Click here for more" />
-          </button>
-        </div>
-        <div class="experience-card">
-          <h3>Ingenious TechWorld</h3>
-          <p><strong>Company:</strong> Ingenious TechWorld</p>
-          <p><strong>Duration:</strong> Jun 2023 – Aug 2024</p>
-          <p><strong>Role:</strong>Mentor</p>
-          <p><strong>Location:</strong>Remote</p>
-          <button class="more-link" data-modal="modal4">
-            <img src="./assets/plus.png" alt="Click here for more" />
-        </div>
-    </div>
-
-    <!-- Modal Popup Structure -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Squbix Digital</h3>
-            <p class="about_company"><strong>Duration:</strong> Nov 2024 – Present</p>
-            <p class="about_company"><strong>Role:</strong> AI Engineer Intern</p>
-            <p class="about_company"><strong>Location:</strong> Bhubaneshwar, Odisha</p>
-            <p class="descriptionn">Responsibilities and skills learned include deploying and fine-tuning Whisper-ASR and other models for text extraction from images/PDFs. <br> <br> Achieving high accuracy through pre-processing techniques, quantalization and model optimization. <br><br> Developed and implemented an OCR pipeline using Python, OpenCV, and PaddleOCR to automate text extraction from Reports, improving data processing efficiency.</p>
-        </div>
-    </div>
-    
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>GDSC AI/ML Lead</h3>
-            <p class="about_company"><strong>Duration:</strong> Aug 2023 – Jun 2024</p>
-            <p class="about_company"><strong>Role:</strong>Lead Member</p>
-            <p class="about_company"><strong>Location:</strong> Bhubaneshwar, Odisha</p>
-            <p class="descriptionn">Directed the AI/ML team of Silicon University, organizing events and boosting student engagement by 35 percent. <br><br> Redesigned promotional contents, which increased event attendance by 30 percent, and led a team to enhance the overall student knowledge on AI/ML.</p>
-        </div>
-    </div>
-    
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Meta Academics Cell</h3>
-            <p class="about_company"><strong>Duration:</strong> Jan 2022 – May 2025</p>
-            <p class="about_company"><strong>Role:</strong>  Core Member</p>
-            <p class="about_company"><strong>Location:</strong> Bhubaneshwar, Odisha</p>
-            <p class="descriptionn"> Directed the Writer's Club of the Meta Academic Cell, improving the writting skills of students. <br><br> Organized and led a team of writers, fostering a collaborative environment for creative expression by 34 percent.</p>
-        </div>
-    </div>
-
-    <div id="modal4" class="modal">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h3>Ingenious TechWorld</h3>
-        <p class="about_company"><strong>Duration:</strong> Jun 2023 – Aug 2024</p>
-        <p class="about_company"><strong>Role:</strong> Mentor</p>
-        <p class="about_company"><strong>Location:</strong> Remote</p>
-        <p class="descriptionn"> Provided mentorship and helped students develop their skills in Cloud computing. <br><br> Led a team of interns, fostering a collaborative environment for learning and growth.</p>        
-        </div>
-      </div>
-</section>
-
-  
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/ncert_bot.png"
-                anim="./assets/wired-outline-1331-repository-hover-pinch.gif"
-                stat="./assets/inverted-static.png"
-                alt="Project 1"
-                class="project-img"
-              />
+        <section id="projects" class="container hidden">
+            <h2>Research & Projects</h2>
+            <div class="project-list">
+                <article class="project-item">
+                    <h3>NCERT-BOT: AI-Powered Study Assistant</h3>
+                    <p class="project-tech"><strong>Tech Stack:</strong> Python, Langchain, Groq AI, Streamlit</p>
+                    <p>Developed a chatbot to help students learn from NCERT textbooks by providing instant, context-aware answers to their questions. Utilizes RAG techniques for efficient information retrieval.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/REDFLAG-bugs/NCERT-BOT" target="_blank">GitHub Repo &rarr;</a>
+                    </div>
+                </article>
+                <article class="project-item">
+                    <h3>Trannote: Automated Transcription & Diarization</h3>
+                    <p class="project-tech"><strong>Tech Stack:</strong> Python, Whisper-ASR, Pyannote</p>
+                    <p>An ongoing project to build a system that transcribes audio and separates speakers (diarization). The core transcription functionality is complete, with a focus now on improving speaker identification accuracy.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/REDFLAG-bugs/trannote.git" target="_blank">GitHub Repo &rarr;</a>
+                    </div>
+                </article>
+                <article class="project-item">
+                    <h3>Real-time Traffic Sign Detection</h3>
+                    <p class="project-tech"><strong>Tech Stack:</strong> Python, OpenCV, Arduino, C++</p>
+                    <p>A hackathon project demonstrating an alternative to GPS-based navigation by using computer vision to detect and interpret traffic signs in real-time. Achieved 6th position.</p>
+                </article>
             </div>
-            <h2 class="experience-sub-title project-title">NCERT-BOT</h2>
+        </section>
 
-            <button class="more-link" data-modal="modal1-project">
-              <img src="./assets/plus.png" alt="Click here for more" />
-          </button>
-            <!-- <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div> -->
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/trannote.png" 
-                anim="./assets/trannote.png"
-                stat="./assets/movie-static.png"
-                alt="Project 1"
-                class="project-img"
-              />
+        <section id="publications" class="container hidden">
+            <h2>Publications & Articles</h2>
+            <div class="publication-list">
+                 <article class="publication-item">
+                    <p class="publication-meta">July 18, 2024 &bull; Medium</p>
+                    <a href="https://medium.com/@carl-writes/infrastructure-as-code-iac-for-aws-eks-cluster-provisioning-using-terraform-95ce0d0a890f" target="_blank">Infrastructure as Code (IaC) for AWS EKS Cluster Provisioning using Terraform</a>
+                    <p>A technical guide on deploying and managing scalable Kubernetes clusters on AWS using Terraform, emphasizing best practices for state management with S3 and DynamoDB.</p>
+                </article>
+                <article class="publication-item">
+                    <p class="publication-meta">Feb 5, 2024 &bull; Medium</p>
+                    <a href="https://medium.com/@carl-writes/optical-character-recognition-ocr-2115d262a32c" target="_blank">An Introduction to Optical Character Recognition (OCR)</a>
+                    <p>An overview of OCR technology, its core processes, and its evolution. Discusses how modern OCR converts various text-based images into machine-readable data.</p>
+                </article>
             </div>
-            <h2 class="experience-sub-title project-title">Trannote</h2>
-
-            <button class="more-link" data-modal="modal2-project">
-              <img src="./assets/plus.png" alt="Click here for more" />
-          </button>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/traffic-cards.gif"
-                anim="./assets/traffic-cards.gif"
-                stat="./assets/plant-static.png"
-                alt="Project 1"
-                class="project-img"
-              />
+             <div class="view-more-container">
+                <a href="blogs.html" class="btn btn-secondary">View All Articles</a>
             </div>
-            <h2 class="experience-sub-title project-title">Traffic Sign Detection</h2>
+        </section>
 
-            <button class="more-link" data-modal="modal3-project">
-              <img src="./assets/plus.png" alt="Click here for more" />
-          </button>
-        </div>
-              <!-- Modal Popup Structure -->
-          <div id="modal1-project" class="modal-project">
-            <div class="modal-content-project">
-                <span class="close-btn">&times;</span>
-                <h3>NCERT-BOT</h3>
-                <p class="about_company"><strong>Timeline</strong> August 2024 - Present</p>
-                <p class="about_company"><strong>Techstack</strong> Python, Groq AI, Langchain</p>
-                <p class="descriptionn">Developing a chabot using Langchain, Groq AI and Python.
-                  So, people facing problems over learning NCERT books can easily get answers to their questions.
-                  For their books to be easily accessible to them.
-                </p>
-                  <img
-              src="./assets/github.png"
-              alt="My Github profile"
-              class="icon-movie"
-              onclick="location.href='https://github.com/REDFLAG-bugs/NCERT-BOT'"
-              
-              
-            />
+        <section id="experience" class="container hidden">
+            <h2>Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h3>Project Associate</h3>
+                    <p><strong>SPIRE Lab, IISc Bangalore</strong> &bull; Bangalore &bull; Aug 2025 – Present</p>
+                </div>
+                <div class="experience-item">
+                    <h3>AI Engineer Intern</h3>
+                    <p><strong>Squbix Digital</strong> &bull; Bhubaneshwar, Odisha &bull; Nov 2024 – Jul 2025</p>
+                </div>
+                 <div class="experience-item">
+                    <h3>Mentor</h3>
+                    <p><strong>Ingenious TechWorld</strong> &bull; Remote &bull; Jun 2023 – Aug 2024</p>
+                </div>
+                <div class="experience-item">
+                    <h3>AI/ML Lead</h3>
+                    <p><strong>GDSC Silicon Chapter</strong> &bull; Bhubaneshwar, Odisha &bull; Aug 2023 – Jun 2024</p>
+                </div>
             </div>
-        </div>
-        
-        <div id="modal2-project" class="modal-project">
-            <div class="modal-content-project">
-                <span class="close-btn">&times;</span>
-                <h3>Trannote</h3>
-                <p class="about_company"><strong>Timeline: </strong> January 2025 - Present</p>
-                <p class="about_company"><strong>Techstack:</strong>Python, Whisper-ASR, Pyannote</p>
-                <p class="descriptionn">Developing a transcribe system using Pyannote, Whisper-ASR and Python.
-                  The transcription part is completed, and currently I am focusing on the diarization part of the system.
-                  The diarization part is still under development, which needs Pyannote and Whisper-ASR.
-                </p>
-                    <img
-              src="./assets/github.png"
-              alt="My Github profile"
-              class="icon-movie"
-              onclick="location.href='https://github.com/REDFLAG-bugs/trannote.git'"
-            />
-            </div>
-        </div>
-        
-        <div id="modal3-project" class="modal-project">
-            <div class="modal-content-project">
-                <span class="close-btn">&times;</span>
-                <h3>Traffic Sign Detection</h3>
-                <p class="about_company"><strong>Duration:</strong> May-June 2024</p>
-                <p class="about_company"><strong>Techstack:</strong> Python, Arduino, C++</p>
-                <p class="descriptionn">Using AI cameras to detect traffic, and signs accordingly. Our main point was for suggesting an 
-                  alternative approach for GPS. The project was completed in 3 months. And, It was a minor project for a hackathon. We stood at 6th position. 
-                </p>
-            </div>
-        </div>
+        </section>
 
-        
-      </div>
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      /> -->
-    </section>
+        <section id="contact" class="container hidden">
+             <h2>Get In Touch</h2>
+             <p>I'm always open to discussing new projects, research collaborations, or opportunities. Feel free to reach out.</p>
+             <div class="contact-methods">
+                <a href="mailto:anshumanmishra274@gmail.com" class="btn btn-primary">anshumanmishra274@gmail.com</a>
+             </div>
+        </section>
 
-    <section class="blog-section">
-      <p class="section__text__p1">Checkout my</p>
-      <h1 class="title">Medium Articles</h1>
-      <!-- Blog Card 1 -->
-      <a href="https://medium.com/@carl-writes/infrastructure-as-code-iac-for-aws-eks-cluster-provisioning-using-terraform-95ce0d0a890f" class="blog-card" target="_blank" rel="noopener noreferrer">
-          <h2 class="blog-title">Infrastructure as Code (IaC) for AWS EKS Cluster Provisioning using Terraform</h2>
-          <p class="blog-subtitle">Deploying and Managing AWS EKS Clusters using Terraform with S3 and DynamoDB for State Management....</p>
-          <div class="blog-meta">
-              <span class="meta-date">Jul 18, 2024</span>
-              <!-- <span class="meta-info">1K views</span>
-              <span class="meta-comments">14 comments</span> -->
-          </div>
-      </a>
-  
-      <!-- Blog Card 2 -->
-      <a href="https://medium.com/@carl-writes/optical-character-recognition-ocr-2115d262a32c" class="blog-card" target="_blank" rel="noopener noreferrer">
-          <h2 class="blog-title">Optical Character Recognition(OCR)</h2>
-          <p class="blog-subtitle">OCR is a Process that converts an image, document, or printed message of text into machine-readable text format...</p>
-          <div class="blog-meta">
-              <span class="meta-date">Feb 5, 2024</span>
-              <!-- <span class="meta-info">800 views</span>
-              <span class="meta-comments">10 comments</span> -->
-          </div>
-      </a>
+    </main>
 
-      <a href="blogs.html" class="load-more-btn">Click for more</a>
-  </section>
-  
-  
-
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:anshumanmishra274@gmail.com">anshumanmishra274@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/iamanshumanmishra/">LinkedIn</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/add-contact.png"
-            alt="Phone icon"
-            class="icon contact-icon"
-          />
-          <p><a href="tel:+919861687595">9861687595</a></p>
-        </div>
-      </div>
-    </section>
     <footer>
-      <p>Copyright &#169; 2025 Anshuman Mishra. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Anshuman Mishra. All Rights Reserved.</p>
+        </div>
     </footer>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
