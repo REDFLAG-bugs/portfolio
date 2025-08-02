@@ -1,0 +1,153 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #e9ecef;
+    color: #212529;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.resume-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    padding: 0.75in;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.resume-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    font-size: 0.95rem;
+}
+
+.contact-info a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.resume-section {
+    margin-bottom: 1.25rem;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: #343a40;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.job {
+    margin-bottom: 1rem;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.job-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+.job-header span {
+    font-size: 1rem;
+    font-style: italic;
+    color: #495057;
+}
+
+.job-dates {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.job ul {
+    padding-left: 20px;
+    margin-top: 0.5rem;
+    color: #495057;
+}
+.job p { margin-bottom: 0.5rem; }
+
+.skills .skill-category {
+    margin-bottom: 0.5rem;
+}
+
+.course-grid, .interests-grid {
+    display: grid;
+    gap: 0.5rem 1.5rem;
+}
+
+.course-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.interests-grid {
+     grid-template-columns: 1fr;
+}
+
+
+.print-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+.print-button-container button {
+    font-family: 'Lato', sans-serif;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.print-button-container button:hover {
+    background-color: #004494;
+}
+
+@media print {
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
+    .resume-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0.5in;
+        max-width: 100%;
+        border: none;
+    }
+    .print-button-container {
+        display: none;
+    }
+    .contact-info a {
+        color: #000000;
+        text-decoration: none;
+    }
+    .job {
+        page-break-inside: avoid;
+    }
+}
