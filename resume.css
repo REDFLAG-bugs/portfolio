@@ -1,4 +1,3 @@
-/* --- GENERAL & ON-SCREEN STYLES --- */
 body {
     font-family: 'Lato', sans-serif;
     background-color: #e9ecef;
@@ -129,7 +128,6 @@ h1, h2, h3 {
     background-color: #004494;
 }
 
-/* --- PRINT-SPECIFIC STYLES --- */
 @media print {
     body {
         background-color: #ffffff;
