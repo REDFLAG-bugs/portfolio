@@ -1,24 +1,25 @@
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #e9ecef;
+    font: 400 1rem/1.5 'Lato', sans-serif;
+    background: #e9ecef;
     color: #212529;
-    line-height: 1.5;
     display: flex;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
 .resume-container {
-    background-color: #ffffff;
+    background: #fff;
     width: 100%;
     max-width: 8.5in;
     min-height: 11in;
     margin: 0 auto;
-    padding: 0.75in;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: .75in;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Lora', serif;
     font-weight: 600;
 }
@@ -29,18 +30,19 @@ h1, h2, h3 {
 }
 
 .resume-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.25rem;
+    margin-bottom: .5rem;
 }
 
 .contact-info {
-    font-size: 0.95rem;
+    font-size: .9rem;
 }
 
 .contact-info a {
-    color: #0056b3;
+    color: #1e40af;
     text-decoration: none;
 }
+
 .contact-info a:hover {
     text-decoration: underline;
 }
@@ -50,12 +52,13 @@ h1, h2, h3 {
 }
 
 .section-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #343a40;
     border-bottom: 2px solid #dee2e6;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.75rem;
+    padding-bottom: .25rem;
+    margin-bottom: .75rem;
     text-transform: uppercase;
+    letter-spacing: .5px;
 }
 
 .job {
@@ -67,86 +70,135 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+    gap: .25rem;
 }
+
 .job-header h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0;
 }
+
 .job-header span {
-    font-size: 1rem;
+    font-size: .9rem;
     font-style: italic;
     color: #495057;
 }
 
 .job-dates {
-    font-size: 0.9rem;
+    font-size: .85rem;
     color: #6c757d;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.job-meta {
+    font-size: .9rem;
+    color: #495057;
+    margin-bottom: .25rem;
 }
 
 .job ul {
-    padding-left: 20px;
-    margin-top: 0.5rem;
+    padding-left: 1.25rem;
+    margin-top: .5rem;
     color: #495057;
+    font-size: .9rem;
 }
-.job p { margin-bottom: 0.5rem; }
+
+.job p {
+    margin-bottom: .5rem;
+    font-size: .9rem;
+}
 
 .skills .skill-category {
-    margin-bottom: 0.5rem;
+    margin-bottom: .4rem;
+    font-size: .9rem;
 }
 
-.course-grid, .interests-grid {
+.course-grid,
+.interests-grid {
     display: grid;
-    gap: 0.5rem 1.5rem;
+    gap: .4rem 1rem;
 }
 
 .course-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+    font-size: .9rem;
 }
 
 .interests-grid {
-     grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+    font-size: .9rem;
 }
-
 
 .print-button-container {
     text-align: center;
     margin-top: 2rem;
 }
+
 .print-button-container button {
     font-family: 'Lato', sans-serif;
-    background-color: #0056b3;
-    color: white;
+    background: #1e40af;
+    color: #fff;
     border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    padding: .6rem 1.25rem;
+    font-size: .9rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background .2s;
 }
+
 .print-button-container button:hover {
-    background-color: #004494;
+    background: #1e3a8a;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem .5rem;
+    }
+
+    .resume-container {
+        padding: .5in .4in;
+        min-height: auto;
+    }
+
+    .resume-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1rem;
+    }
+
+    .job-header {
+        flex-direction: column;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media print {
     body {
-        background-color: #ffffff;
+        background: #fff;
         padding: 0;
     }
+
     .resume-container {
         box-shadow: none;
         margin: 0;
-        padding: 0.5in;
+        padding: .5in;
         max-width: 100%;
-        border: none;
     }
+
     .print-button-container {
         display: none;
     }
+
     .contact-info a {
-        color: #000000;
-        text-decoration: none;
+        color: #000;
     }
+
     .job {
         page-break-inside: avoid;
     }
