@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anshuman Mishra - AI/ML Researcher at IISc Bangalore. Focused on speech processing, ASR, and machine learning systems.">
+    <meta name="keywords" content="AI, ML, Machine Learning, Speech Processing, ASR, IISc Bangalore, Researcher">
+    <meta property="og:title" content="Anshuman Mishra | AI/ML Researcher">
+    <meta property="og:description" content="Project Associate at SPIRE Lab, IISc Bangalore - Speech & Signal Processing Research">
+    <meta property="og:type" content="website">
     <title>Anshuman Mishra | AI/ML Researcher</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav class="container">
+        <nav class="container" aria-label="Main navigation">
             <a href="#" class="logo">Anshuman Mishra</a>
-            <div class="nav-links">
+            <div class="nav-links" role="navigation">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#publications">Publications</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
-                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle theme">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
                     <span class="sun-icon">☀️</span>
                     <span class="moon-icon">🌙</span>
                 </button>
             </div>
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span><span></span><span></span>
             </div>
         </nav>
     </header>
@@ -36,27 +40,22 @@
             <div class="profile-text hidden">
                 <h1 class="name-title">Anshuman Mishra</h1>
                 <p class="subtitle">Project Associate at IISc Bangalore | AI/ML Researcher</p>
-                <p class="bio">
-                    Project Associate at the SPIRE Lab, IISc Bangalore, contributing to research in signal processing and machine learning. Formerly an AI Engineer Intern at Squbix Digital with a background in deep learning, cloud computing, and developing intelligent systems.
-                </p>
+                <p class="bio">Project Associate at the SPIRE Lab, IISc Bangalore, contributing to research in signal processing and machine learning. Formerly an AI Engineer Intern at Squbix Digital with a background in deep learning, cloud computing, and developing intelligent systems.</p>
                 <div class="cta-buttons">
-                    <!-- <a href="assets/resume.pdf" class="btn btn-primary" target="_blank">Download CV</a> -->
                     <a href="resume.html" class="btn btn-primary" target="_blank">View CV</a>
-                    <a href="https://github.com/REDFLAG-bugs" class="btn btn-secondary" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/iamanshumanmishra/" class="btn btn-secondary" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/REDFLAG-bugs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/iamanshumanmishra/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
             <div class="profile-pic-container hidden">
-                <img src="./assets/portfolio-pic.jpeg" alt="Anshuman Mishra" class="profile-pic">
+                <img src="./assets/portfolio-pic.jpeg" alt="Anshuman Mishra" class="profile-pic" loading="eager">
             </div>
         </section>
 
         <section id="about" class="container hidden">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>
-                  I’m currently a Project Associate at the SPIRE Lab, IISc Bangalore, working on research problems in speech and signal processing. My interest in applied AI began during my B.Tech at Silicon University and was further shaped by an internship at Squbix Digital, where I worked on deploying and fine-tuning ASR and OCR models. I also led the AI/ML track at my university’s GDSC chapter, where I gained experience in collaboration and open technical discussions—skills I now apply in my research.
-                </p>
+                <p>I'm currently a Project Associate at the SPIRE Lab, IISc Bangalore, working on research problems in speech and signal processing. My interest in applied AI began during my B.Tech at Silicon University and was further shaped by an internship at Squbix Digital, where I worked on deploying and fine-tuning ASR and OCR models. I also led the AI/ML track at my university's GDSC chapter, where I gained experience in collaboration and open technical discussions—skills I now apply in my research.</p>
             </div>
         </section>
 
@@ -64,7 +63,7 @@
             <h2>Research Interests</h2>
             <ul class="interests-list">
                 <li>Speech & Signal Processing</li>
-                <li>Fine-Tuning Large Language Models (LLMs)</li>
+                <li>Fine-Tuning Large Language Models</li>
                 <li>Efficient OCR & ASR Systems</li>
                 <li>Computer Vision for Automation</li>
                 <li>Responsible AI & Model Explainability</li>
@@ -76,24 +75,24 @@
             <div class="project-list">
                 <article class="project-item">
                     <h3>NCERT-BOT: AI-Powered Study Assistant</h3>
-                    <p class="project-tech"><strong>Tech Stack:</strong> Python, Langchain, Groq AI, Streamlit</p>
-                    <p>Developed a chatbot to help students learn from NCERT textbooks by providing instant, context-aware answers to their questions. Utilizes RAG techniques for efficient information retrieval.</p>
+                    <p class="project-tech"><strong>Stack:</strong> Python, Langchain, Groq AI, Streamlit</p>
+                    <p>Developed a chatbot to help students learn from NCERT textbooks by providing instant, context-aware answers. Utilizes RAG techniques for efficient information retrieval.</p>
                     <div class="project-links">
-                        <a href="https://github.com/REDFLAG-bugs/NCERT-BOT" target="_blank">GitHub Repo &rarr;</a>
+                        <a href="https://github.com/REDFLAG-bugs/NCERT-BOT" target="_blank" rel="noopener">GitHub →</a>
                     </div>
                 </article>
                 <article class="project-item">
                     <h3>Trannote: Automated Transcription & Diarization</h3>
-                    <p class="project-tech"><strong>Tech Stack:</strong> Python, Whisper-ASR, Pyannote</p>
-                    <p>An ongoing project to build a system that transcribes audio and separates speakers (diarization). The core transcription functionality is complete, with a focus now on improving speaker identification accuracy.</p>
+                    <p class="project-tech"><strong>Stack:</strong> Python, Whisper-ASR, Pyannote</p>
+                    <p>A system that transcribes audio and separates speakers (diarization). Core transcription functionality complete, with ongoing focus on improving speaker identification accuracy.</p>
                     <div class="project-links">
-                        <a href="https://github.com/REDFLAG-bugs/trannote.git" target="_blank">GitHub Repo &rarr;</a>
+                        <a href="https://github.com/REDFLAG-bugs/trannote.git" target="_blank" rel="noopener">GitHub →</a>
                     </div>
                 </article>
                 <article class="project-item">
                     <h3>Real-time Traffic Sign Detection</h3>
-                    <p class="project-tech"><strong>Tech Stack:</strong> Python, OpenCV, Arduino, C++</p>
-                    <p>A hackathon project demonstrating an alternative to GPS-based navigation by using computer vision to detect and interpret traffic signs in real-time. Achieved 6th position.</p>
+                    <p class="project-tech"><strong>Stack:</strong> Python, OpenCV, Arduino, C++</p>
+                    <p>A hackathon project demonstrating an alternative to GPS-based navigation using computer vision to detect and interpret traffic signs in real-time. Achieved 6th position.</p>
                 </article>
             </div>
         </section>
@@ -101,18 +100,18 @@
         <section id="publications" class="container hidden">
             <h2>Publications & Articles</h2>
             <div class="publication-list">
-                 <article class="publication-item">
-                    <p class="publication-meta">July 18, 2024 &bull; Medium</p>
-                    <a href="https://medium.com/@carl-writes/infrastructure-as-code-iac-for-aws-eks-cluster-provisioning-using-terraform-95ce0d0a890f" target="_blank">Infrastructure as Code (IaC) for AWS EKS Cluster Provisioning using Terraform</a>
-                    <p>A technical guide on deploying and managing scalable Kubernetes clusters on AWS using Terraform, emphasizing best practices for state management with S3 and DynamoDB.</p>
+                <article class="publication-item">
+                    <p class="publication-meta">Jul 18, 2024 • Medium</p>
+                    <a href="https://medium.com/@carl-writes/infrastructure-as-code-iac-for-aws-eks-cluster-provisioning-using-terraform-95ce0d0a890f" target="_blank" rel="noopener">Infrastructure as Code for AWS EKS Cluster Provisioning using Terraform</a>
+                    <p>A technical guide on deploying scalable Kubernetes clusters on AWS using Terraform, emphasizing best practices for state management.</p>
                 </article>
                 <article class="publication-item">
-                    <p class="publication-meta">Feb 5, 2024 &bull; Medium</p>
-                    <a href="https://medium.com/@carl-writes/optical-character-recognition-ocr-2115d262a32c" target="_blank">An Introduction to Optical Character Recognition (OCR)</a>
-                    <p>An overview of OCR technology, its core processes, and its evolution. Discusses how modern OCR converts various text-based images into machine-readable data.</p>
+                    <p class="publication-meta">Feb 5, 2024 • Medium</p>
+                    <a href="https://medium.com/@carl-writes/optical-character-recognition-ocr-2115d262a32c" target="_blank" rel="noopener">An Introduction to Optical Character Recognition (OCR)</a>
+                    <p>An overview of OCR technology, its core processes, and evolution. Discusses how modern OCR converts text-based images into machine-readable data.</p>
                 </article>
             </div>
-             <div class="view-more-container">
+            <div class="view-more-container">
                 <a href="blogs.html" class="btn btn-secondary">View All Articles</a>
             </div>
         </section>
@@ -122,36 +121,35 @@
             <div class="experience-list">
                 <div class="experience-item">
                     <h3>Project Associate</h3>
-                    <p><strong>SPIRE Lab, IISc Bangalore</strong> &bull; Bangalore &bull; Jul 2025 – Present</p>
+                    <p><strong>SPIRE Lab, IISc Bangalore</strong> • Bangalore • Jul 2025 – Present</p>
                 </div>
                 <div class="experience-item">
                     <h3>AI Engineer Intern</h3>
-                    <p><strong>Squbix Digital</strong> &bull; Bhubaneshwar, Odisha &bull; Nov 2024 – Jun 2025</p>
+                    <p><strong>Squbix Digital</strong> • Bhubaneswar • Nov 2024 – Jun 2025</p>
                 </div>
-                 <div class="experience-item">
+                <div class="experience-item">
                     <h3>Mentor</h3>
-                    <p><strong>Ingenious TechWorld</strong> &bull; Remote &bull; Jun 2023 – Aug 2024</p>
+                    <p><strong>Ingenious TechWorld</strong> • Remote • Jun 2023 – Aug 2024</p>
                 </div>
                 <div class="experience-item">
                     <h3>AI/ML Lead</h3>
-                    <p><strong>GDSC Silicon Chapter</strong> &bull; Bhubaneshwar, Odisha &bull; Aug 2023 – Jun 2024</p>
+                    <p><strong>GDSC Silicon Chapter</strong> • Bhubaneswar • Aug 2023 – Jun 2024</p>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="container hidden">
-             <h2>Get In Touch</h2>
-             <p>I'm always open to discussing new projects, research collaborations, or opportunities. Feel free to reach out.</p>
-             <div class="contact-methods">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to discussing new projects, research collaborations, or opportunities. Feel free to reach out.</p>
+            <div class="contact-methods">
                 <a href="mailto:anshumanmishra274@gmail.com" class="btn btn-primary">anshumanmishra274@gmail.com</a>
-             </div>
+            </div>
         </section>
-
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Anshuman Mishra. All Rights Reserved.</p>
+            <p>© 2025 Anshuman Mishra. All Rights Reserved.</p>
         </div>
     </footer>
 

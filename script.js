@@ -1,45 +1,36 @@
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+
 function toggleMenu() {
-    const menu = document.querySelector(".nav-links");
-    menu.classList.toggle("open");
+    $('.nav-links').classList.toggle('open');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const htmlEl = document.documentElement;
+document.addEventListener('DOMContentLoaded', () => {
+    const html = document.documentElement;
+    const toggle = $('#theme-toggle');
 
-    const applyTheme = (theme) => {
-        if (theme === 'dark') {
-            htmlEl.setAttribute('data-theme', 'dark');
-        } else {
-            htmlEl.removeAttribute('data-theme');
-        }
-    };
+    // Theme
+    const theme = localStorage.getItem('theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (theme === 'dark') html.dataset.theme = 'dark';
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        applyTheme(savedTheme);
-    } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        applyTheme(prefersDark ? 'dark' : 'light');
-    }
-    
-    themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = htmlEl.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        applyTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
+    toggle?.addEventListener('click', () => {
+        const isDark = html.dataset.theme === 'dark';
+        html.dataset.theme = isDark ? '' : 'dark';
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
     });
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
+
+    // Mobile menu close on link click
+    $$('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            $('.nav-links').classList.remove('open');
         });
-    }, {
-        threshold: 0.1 
     });
 
-    const hiddenElements = document.querySelectorAll(".hidden");
-    hiddenElements.forEach((el) => observer.observe(el));
+    // Scroll animations
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => e.isIntersecting && e.target.classList.add('show'));
+    }, { threshold: 0.1 });
+
+    $$('.hidden').forEach(el => observer.observe(el));
 });
