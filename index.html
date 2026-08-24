@@ -1,158 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Anshuman Mishra - AI/ML Researcher at IISc Bangalore. Focused on speech processing, ASR, and machine learning systems.">
-    <meta name="keywords" content="AI, ML, Machine Learning, Speech Processing, ASR, IISc Bangalore, Researcher">
-    <meta property="og:title" content="Anshuman Mishra | AI/ML Researcher">
-    <meta property="og:description" content="Project Associate at SPIRE Lab, IISc Bangalore - Speech & Signal Processing Research">
-    <meta property="og:type" content="website">
-    <title>Anshuman Mishra | AI/ML Researcher</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anshuman Mishra</title>
+  <meta name="description" content="Anshuman Mishra — Project Associate at SPIRE Lab, IISc Bangalore. Speech, ASR, and low-resource language models." />
+  <meta name="theme-color" content="#090a0c" />
+  <meta property="og:title" content="Anshuman Mishra" />
+  <meta property="og:description" content="Speech that machines still fail to hear. Project Associate, SPIRE Lab, IISc Bangalore." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav class="container" aria-label="Main navigation">
-            <a href="#" class="logo">Anshuman Mishra</a>
-            <div class="nav-links" role="navigation">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#publications">Publications</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-                    <span class="sun-icon">☀️</span>
-                    <span class="moon-icon">🌙</span>
-                </button>
-            </div>
-            <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">
-                <span></span><span></span><span></span>
-            </div>
-        </nav>
-    </header>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <canvas id="wave-nav" width="96" height="32" aria-hidden="true"></canvas>
+        Anshuman Mishra
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#path">Signal</a>
+        <a href="#story">Story</a>
+        <a href="#work">Work</a>
+        <a href="#jaga">JAGA</a>
+        <a href="writing.html">Writing</a>
+        <a href="resume.html">CV</a>
+        <a class="btn btn-primary" href="mailto:anshumanmishra274@gmail.com">Write</a>
+      </nav>
+      <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-panel" id="mobile-panel">
+      <a href="#path">Signal</a>
+      <a href="#story">Story</a>
+      <a href="#work">Work</a>
+      <a href="#jaga">JAGA</a>
+      <a href="writing.html">Writing</a>
+      <a href="resume.html">CV</a>
+      <a href="mailto:anshumanmishra274@gmail.com">Email</a>
+    </div>
+  </header>
 
-    <main>
-        <section id="profile" class="container">
-            <div class="profile-text hidden">
-                <h1 class="name-title">Anshuman Mishra</h1>
-                <p class="subtitle">Project Associate at IISc Bangalore | AI/ML Researcher</p>
-                <p class="bio">Project Associate at the SPIRE Lab, IISc Bangalore, contributing to research in signal processing and machine learning. Formerly an AI Engineer Intern at Squbix Digital with a background in deep learning, cloud computing, and developing intelligent systems.</p>
-                <div class="cta-buttons">
-                    <a href="resume.html" class="btn btn-primary" target="_blank">View CV</a>
-                    <a href="https://github.com/REDFLAG-bugs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://www.linkedin.com/in/iamanshumanmishra/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
-            </div>
-            <div class="profile-pic-container hidden">
-                <img src="./assets/portfolio-pic.jpeg" alt="Anshuman Mishra" class="profile-pic" loading="eager">
-            </div>
-        </section>
-
-        <section id="about" class="container hidden">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>I'm currently a Project Associate at the SPIRE Lab, IISc Bangalore, working on research problems in speech and signal processing. My interest in applied AI began during my B.Tech at Silicon University and was further shaped by an internship at Squbix Digital, where I worked on deploying and fine-tuning ASR and OCR models. I also led the AI/ML track at my university's GDSC chapter, where I gained experience in collaboration and open technical discussions—skills I now apply in my research.</p>
-            </div>
-        </section>
-
-        <section id="research-interests" class="container hidden">
-            <h2>Research Interests</h2>
-            <ul class="interests-list">
-                <li>Speech & Signal Processing</li>
-                <li>Fine-Tuning Large Language Models</li>
-                <li>Efficient OCR & ASR Systems</li>
-                <li>Computer Vision for Automation</li>
-                <li>Responsible AI & Model Explainability</li>
-            </ul>
-        </section>
-
-        <section id="projects" class="container hidden">
-            <h2>Research & Projects</h2>
-            <div class="project-list">
-                <article class="project-item">
-                    <h3>NCERT-BOT: AI-Powered Study Assistant</h3>
-                    <p class="project-tech"><strong>Stack:</strong> Python, Langchain, Groq AI, Streamlit</p>
-                    <p>Developed a chatbot to help students learn from NCERT textbooks by providing instant, context-aware answers. Utilizes RAG techniques for efficient information retrieval.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/REDFLAG-bugs/NCERT-BOT" target="_blank" rel="noopener">GitHub →</a>
-                    </div>
-                </article>
-                <article class="project-item">
-                    <h3>Trannote: Automated Transcription & Diarization</h3>
-                    <p class="project-tech"><strong>Stack:</strong> Python, Whisper-ASR, Pyannote</p>
-                    <p>A system that transcribes audio and separates speakers (diarization). Core transcription functionality complete, with ongoing focus on improving speaker identification accuracy.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/REDFLAG-bugs/trannote.git" target="_blank" rel="noopener">GitHub →</a>
-                    </div>
-                </article>
-                <article class="project-item">
-                    <h3>Real-time Traffic Sign Detection</h3>
-                    <p class="project-tech"><strong>Stack:</strong> Python, OpenCV, Arduino, C++</p>
-                    <p>A hackathon project demonstrating an alternative to GPS-based navigation using computer vision to detect and interpret traffic signs in real-time. Achieved 6th position.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="publications" class="container hidden">
-            <h2>Publications & Articles</h2>
-            <div class="publication-list">
-                <article class="publication-item">
-                    <p class="publication-meta">Jul 18, 2024 • Medium</p>
-                    <a href="https://medium.com/@carl-writes/infrastructure-as-code-iac-for-aws-eks-cluster-provisioning-using-terraform-95ce0d0a890f" target="_blank" rel="noopener">Infrastructure as Code for AWS EKS Cluster Provisioning using Terraform</a>
-                    <p>A technical guide on deploying scalable Kubernetes clusters on AWS using Terraform, emphasizing best practices for state management.</p>
-                </article>
-                <article class="publication-item">
-                    <p class="publication-meta">Feb 5, 2024 • Medium</p>
-                    <a href="https://medium.com/@carl-writes/optical-character-recognition-ocr-2115d262a32c" target="_blank" rel="noopener">An Introduction to Optical Character Recognition (OCR)</a>
-                    <p>An overview of OCR technology, its core processes, and evolution. Discusses how modern OCR converts text-based images into machine-readable data.</p>
-                </article>
-            </div>
-            <div class="view-more-container">
-                <a href="blogs.html" class="btn btn-secondary">View All Articles</a>
-            </div>
-        </section>
-
-        <section id="experience" class="container hidden">
-            <h2>Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <h3>Project Associate</h3>
-                    <p><strong>SPIRE Lab, IISc Bangalore</strong> • Bangalore • Jul 2025 – Present</p>
-                </div>
-                <div class="experience-item">
-                    <h3>AI Engineer Intern</h3>
-                    <p><strong>Squbix Digital</strong> • Bhubaneswar • Nov 2024 – Jun 2025</p>
-                </div>
-                <div class="experience-item">
-                    <h3>Mentor</h3>
-                    <p><strong>Ingenious TechWorld</strong> • Remote • Jun 2023 – Aug 2024</p>
-                </div>
-                <div class="experience-item">
-                    <h3>AI/ML Lead</h3>
-                    <p><strong>GDSC Silicon Chapter</strong> • Bhubaneswar • Aug 2023 – Jun 2024</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="container hidden">
-            <h2>Get In Touch</h2>
-            <p>I'm always open to discussing new projects, research collaborations, or opportunities. Feel free to reach out.</p>
-            <div class="contact-methods">
-                <a href="mailto:anshumanmishra274@gmail.com" class="btn btn-primary">anshumanmishra274@gmail.com</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Anshuman Mishra. All Rights Reserved.</p>
+  <main>
+    <section class="hero" id="top">
+      <canvas id="flow-top" class="flow-top" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Speech · Signal · Low-resource ASR</p>
+          <h1>Anshuman Mishra</h1>
+          <p class="lede">Speech that machines still fail to hear.</p>
+          <p class="lead">I train models on the voices that fall off the map — dysarthric speech, low-resource Indian languages, and the dialects between them — then put those models into production.</p>
+          <p class="meta">Project Associate, SPIRE Lab · Indian Institute of Science, Bangalore</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="resume.html">Read the CV</a>
+            <a class="btn btn-secondary" href="https://jagalabs.netlify.app/" target="_blank" rel="noopener">JAGA Labs ↗</a>
+            <a class="btn btn-ghost" href="mailto:anshumanmishra274@gmail.com">Email</a>
+          </div>
         </div>
-    </footer>
+        <div class="portrait">
+          <img src="assets/portfolio-pic.jpeg" alt="Anshuman Mishra" width="640" height="640" />
+          <div class="portrait-cap">
+            <p>Live signal · follows the path below</p>
+            <canvas id="wave-portrait" style="width:100%;height:72px" aria-hidden="true"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="wrap" style="margin-top:1.5rem">
+        <canvas id="wave-hero" style="width:100%;height:140px" aria-hidden="true"></canvas>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="path">
+      <div class="wrap">
+        <p class="kicker">01 · Signal path</p>
+        <h2>Audio in. Meaning out. The same four stages, whether the speaker has ALS or a dialect the corpus never saw.</h2>
+        <p class="muted" style="margin-top:1rem;max-width:40rem">Hover a stage. The waveform is not decoration — it is the pipeline, drawn.</p>
+        <div class="path-grid" style="margin-top:2.5rem">
+          <div>
+            <div class="stages">
+              <button class="stage" data-stage="capture" type="button">
+                <span class="idx">01</span><h3>Capture</h3><small>The waveform as it is</small>
+              </button>
+              <button class="stage" data-stage="represent" type="button">
+                <span class="idx">02</span><h3>Represent</h3><small>Self-supervised speech</small>
+              </button>
+              <button class="stage" data-stage="adapt" type="button">
+                <span class="idx">03</span><h3>Adapt</h3><small>Domain, then task</small>
+              </button>
+              <button class="stage" data-stage="serve" type="button">
+                <span class="idx">04</span><h3>Serve</h3><small>Sub-second, in production</small>
+              </button>
+            </div>
+            <svg class="flow-line" viewBox="0 0 400 24" fill="none" aria-hidden="true">
+              <path d="M8 12 C 70 12, 90 4, 140 12 S 210 20, 260 12 S 330 4, 392 12" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.2" />
+              <circle cx="8" cy="12" r="2.2" fill="currentColor" />
+              <circle cx="140" cy="12" r="2.2" fill="currentColor" />
+              <circle cx="260" cy="12" r="2.2" fill="currentColor" />
+              <circle cx="392" cy="12" r="2.2" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="detail" id="stage-detail">
+            <p class="kicker" data-idx>01 · CAPTURE</p>
+            <h3 data-title>The waveform as it is</h3>
+            <p data-body>Clinical speech across spontaneous, phonation, and diadochokinetic tasks. Dialect recordings. Quality-control heuristics before anything reaches a trainer.</p>
+            <ul class="tags" data-tags>
+              <li>SPON / PHON / DDK</li><li>Vaani audit</li><li>QC pipeline</li>
+            </ul>
+            <p class="subtle" style="margin-top:1.5rem;font-size:0.75rem">Hover a stage — the waveform above follows the signal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="story">
+      <div class="wrap">
+        <div class="story-grid">
+          <div>
+            <p class="kicker">02 · How I got here</p>
+            <h2>A coverage problem, not a demo problem.</h2>
+          </div>
+          <div class="prose muted">
+            <p>Most ASR systems are built on the speech that is easiest to collect: read prompts, high-resource languages, typical articulation. The work I care about sits outside that set.</p>
+            <p>I grew up around Odia. The distance between what people actually say — dialect, disorder, code-mixing — and what a model transcribes is not a curiosity. It is a coverage problem. At Squbix I learned to ship: Whisper fine-tunes for Hindi, Telugu, and Odia, streaming over WebSockets, Docker on EC2. At IISc I went deeper — multilingual dysarthric recognition, severity estimation for ALS and Parkinson’s, and language models trained on the Indian languages that still lack them.</p>
+            <p>JAGA Labs is the other thread. Odia has almost no systematic dialect coverage. I started a registry and a collection effort across Odisha’s thirty districts so the next models have something real to train on.</p>
+          </div>
+        </div>
+        <p class="kicker" style="margin-top:2.5rem">Timeline · scrub the tape</p>
+        <div class="tape">
+          <ol>
+            <li><a href="#story"><span class="year">2021</span><span class="lab">EEE, Silicon</span></a></li>
+            <li><a href="#work"><span class="year">2023</span><span class="lab">GDSC AI/ML Lead</span></a></li>
+            <li><a href="#work"><span class="year">2024</span><span class="lab">Squbix · ASR in prod</span></a></li>
+            <li><a href="#now"><span class="year">2025</span><span class="lab">SPIRE Lab, IISc</span></a></li>
+            <li><a href="#jaga"><span class="year">Now</span><span class="lab">JAGA Labs</span></a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="now">
+      <div class="wrap">
+        <p class="kicker">03 · Now · SPIRE Lab</p>
+        <h2>Multilingual dysarthria, severity, and the languages still missing from the stack.</h2>
+        <p class="subtle" style="margin-top:0.75rem;font-size:0.9rem">Advisor: Prof. Prasanta Kumar Ghosh</p>
+        <ul class="now-grid" style="margin-top:2.5rem;list-style:none">
+          <li class="card"><h3>Multilingual dysarthric ASR</h3><p>Fine-tuning wav2vec2, HuBERT, XLSR-53, and MMS on ALS and Parkinson’s speech. Domain adaptation cut character error rate by about 30%.</p></li>
+          <li class="card"><h3>Severity from speech</h3><p>CNN-LSTM over wav2vec2 embeddings, predicting ALSFRS-R-aligned scores from SPON, PHON, and DDK tasks — built to sit inside a clinical pathology application.</p></li>
+          <li class="card"><h3>Low-resource Indian LM</h3><p>MuRIL masked-language pretraining on Chhattisgarhi, Magahi, Bhojpuri, and Bengali. Hard regex cleaning of raw crawls; models released on Hugging Face.</p></li>
+          <li class="card"><h3>Clinical speech validation</h3><p>Automated quality-control heuristics plus human review, so downstream trainers are not quietly learning from broken takes.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work" style="border-top:1px solid var(--border)">
+      <div class="wrap">
+        <p class="kicker">04 · Experience</p>
+        <h2>Where the work happened.</h2>
+        <div class="jobs" style="margin-top:2.5rem">
+          <article class="job">
+            <div>
+              <p class="kicker">Jul 2025 – Present</p>
+              <p class="subtle" style="margin-top:0.5rem;font-size:0.9rem">Bangalore</p>
+            </div>
+            <div>
+              <h3>Project Associate</h3>
+              <p class="muted" style="margin-top:0.25rem">SPIRE Lab, Indian Institute of Science</p>
+              <p class="subtle" style="margin-top:0.25rem;font-size:0.75rem">Advisor: Prof. Prasanta Kumar Ghosh</p>
+              <ul>
+                <li>Developing deep learning models for multilingual dysarthric speech recognition and severity estimation across ALS and Parkinson’s Disease datasets using PyTorch and self-supervised Transformer architectures.</li>
+                <li>Fine-tuned wav2vec2, HuBERT, XLSR-53, and MMS, reducing character error rate by approximately 30% across multilingual clinical speech through domain adaptation and task-specific optimization.</li>
+                <li>Designed an automated clinical speech validation pipeline combining quality-control heuristics and human review.</li>
+                <li>Building a dysarthria severity classifier that integrates CNN-LSTM architectures with wav2vec2 Transformer embeddings, predicting ALSFRS-R-aligned scores from SPON, PHON, and DDK tasks.</li>
+                <li>Pre-trained a MuRIL-based masked language model on low-resource Indian language text (Chhattisgarhi, Magahi, Bhojpuri, Bengali). Outperformed L3Cube-Pune and XLM-RoBERTa-base on the target languages.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div>
+              <p class="kicker">Nov 2024 – Jun 2025</p>
+              <p class="subtle" style="margin-top:0.5rem;font-size:0.9rem">Bhubaneswar</p>
+            </div>
+            <div>
+              <h3>AI Engineer Intern</h3>
+              <p class="muted" style="margin-top:0.25rem">Squbix Digital</p>
+              <ul>
+                <li>Fine-tuned Whisper on clinical speech across Hindi, Telugu, and Odia. Built an end-to-end pipeline covering voice capture, ASR transcription, and speaker diarization (AssemblyAI; Pyannote for two-speaker settings). Code passed UAT and shipped to client production.</li>
+                <li>Deployed the fine-tuned model in a Dockerized environment on AWS EC2, orchestrated via Lambda. Stress-tested with supervisor as a process manager to benchmark instance performance.</li>
+                <li>Designed streaming transcription over WebSockets with sub-second latency, plus confidence-based quality checks that flag low-confidence segments before downstream consumption.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div>
+              <p class="kicker">May 2023 – Dec 2023</p>
+              <p class="subtle" style="margin-top:0.5rem;font-size:0.9rem">Bhubaneswar</p>
+            </div>
+            <div>
+              <h3>AI/ML Lead</h3>
+              <p class="muted" style="margin-top:0.25rem">Google Developer Student Clubs, Silicon University</p>
+              <ul>
+                <li>Led AI/ML learning sessions and mentored students on machine learning fundamentals, neural networks, and applied AI workflows.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="skills">
+          <div><h3>LANGUAGES</h3><p>Python · C++ (basics) · SQL</p></div>
+          <div><h3>SPEECH</h3><p>ASR (ESPnet2, Whisper, wav2vec2, HuBERT, XLSR-53/MMS) · Speaker diarization · Real-time transcription · Low-resource & multilingual modeling · Pathological speech</p></div>
+          <div><h3>ML</h3><p>PyTorch · TensorFlow · Hugging Face · Fine-tuning · BPE · NLP · Model evaluation</p></div>
+          <div><h3>INFRA</h3><p>AWS (EC2, S3, Lambda) · Docker · Terraform · Linux</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="jaga">
+      <div class="wrap">
+        <p class="kicker">05 · Side project</p>
+        <div class="jaga-grid">
+          <div>
+            <p class="kicker">Odia dialect corpus initiative</p>
+            <h2 style="font-size:clamp(2rem,1.4rem + 2vw,2.75rem);margin-top:0.5rem">JAGA Labs</h2>
+            <p class="muted" style="margin-top:1.25rem">An open registry of Odia speech data and a collection effort across Odisha’s 30 districts. Existing public corpora (Vaani, MUCS 2021 / OpenSLR 103) cover only four districts and almost no spontaneous conversational speech. JAGA catalogues what exists, cleans what is contaminated, and coordinates native-speaker collection for the rest.</p>
+            <ul class="points">
+              <li>Script-level audit of the Vaani Odia subset: removed 21 utterances with Bengali, Assamese, or Devanagari contamination. Cleaned split released on Hugging Face (CC-BY-NC 4.0).</li>
+              <li>Vaani-OR extraction: ~52.5 hours across train/val/test, 55.6 GB, district-tagged spontaneous speech.</li>
+              <li>Native-speaker translation of Odia utterances into Hindi and English for a parallel low-resource corpus.</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://jagalabs.netlify.app/" target="_blank" rel="noopener">jagalabs.netlify.app ↗</a>
+              <a class="btn btn-secondary" href="https://huggingface.co/datasets/Minutor/vaani-or-dataset" target="_blank" rel="noopener">Cleaned Vaani-OR ↗</a>
+              <a class="btn btn-secondary" href="https://huggingface.co/datasets/Minutor/odia_asr_collection" target="_blank" rel="noopener">Odia ASR collection ↗</a>
+            </div>
+          </div>
+          <div>
+            <div class="dist-head"><span>Odisha · 30 districts</span><span><span style="color:var(--primary)">4</span> / 30 in public corpora</span></div>
+            <ul class="districts">
+              <li>Angul</li><li>Balangir</li><li>Balasore</li><li>Bargarh</li><li>Bhadrak</li>
+              <li>Boudh</li><li>Cuttack</li><li>Deogarh</li><li>Dhenkanal</li><li>Gajapati</li>
+              <li>Ganjam</li><li>Jagatsinghpur</li><li>Jajpur</li><li>Jharsuguda</li><li>Kalahandi</li>
+              <li>Kandhamal</li><li>Kendrapara</li><li>Keonjhar</li><li>Khordha</li><li class="on">Koraput</li>
+              <li>Malkangiri</li><li class="on">Mayurbhanj</li><li>Nabarangpur</li><li>Nayagarh</li><li>Nuapada</li>
+              <li class="on">Puri</li><li>Rayagada</li><li class="on">Sambalpur</li><li>Subarnapur</li><li>Sundargarh</li>
+            </ul>
+            <p class="subtle" style="margin-top:0.75rem;font-size:0.75rem">Lit cells are the four districts in MUCS 2021. The rest is the collection gap JAGA is built to close.</p>
+          </div>
+        </div>
+        <ul class="proj-grid" style="margin-top:4rem;list-style:none">
+          <li class="card" style="background:var(--bg)">
+            <p class="kicker">Real-time transcription pipeline</p>
+            <h3 style="margin-top:0.5rem">Trannote</h3>
+            <p>End-to-end streaming transcription with ffmpeg format handling, chunk-level quality filtering via Whisper’s no-speech probability, and Pyannote diarization for two-speaker settings. Two-pass decoding: greedy interim output, then beam-search at session end.</p>
+            <p class="subtle" style="font-family:var(--font-mono);font-size:11px">Whisper · Pyannote · WebSockets · ffmpeg</p>
+            <a class="kicker" style="display:inline-flex;height:44px;align-items:center" href="https://github.com/REDFLAG-bugs/trannote" target="_blank" rel="noopener">GitHub ↗</a>
+          </li>
+          <li class="card" style="background:var(--bg)">
+            <p class="kicker">Masked language model</p>
+            <h3 style="margin-top:0.5rem">MuRIL for low-resource Indic text</h3>
+            <p>Domain-matched pretraining on Chhattisgarhi, Magahi, Bhojpuri, and Bengali. Hard regex cleaning turned raw crawls into training-ready text. Outperformed L3Cube-Pune and XLM-RoBERTa-base on the target languages.</p>
+            <p class="subtle" style="font-family:var(--font-mono);font-size:11px">MuRIL · MLM · Hugging Face</p>
+            <a class="kicker" style="display:inline-flex;height:44px;align-items:center" href="https://huggingface.co/Minutor" target="_blank" rel="noopener">Hugging Face ↗</a>
+          </li>
+          <li class="card" style="background:var(--bg)">
+            <p class="kicker">Study assistant</p>
+            <h3 style="margin-top:0.5rem">NCERT-BOT</h3>
+            <p>A retrieval-augmented chatbot over NCERT textbooks — context-aware answers for CBSE students, with scraping and self-RAG summarization in the pipeline.</p>
+            <p class="subtle" style="font-family:var(--font-mono);font-size:11px">Python · LangChain · Groq · Streamlit</p>
+            <a class="kicker" style="display:inline-flex;height:44px;align-items:center" href="https://github.com/REDFLAG-bugs/NCERT-BOT" target="_blank" rel="noopener">GitHub ↗</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="wrap">
+        <p class="kicker">06 · Writing</p>
+        <div style="display:flex;justify-content:space-between;align-items:end;gap:1rem">
+          <h2>Notes on infrastructure and OCR.</h2>
+          <a href="writing.html" class="kicker">All articles</a>
+        </div>
+        <ul class="write-list" style="margin-top:2rem">
+          <li><a href="https://medium.com/@carl-writes/infrastructure-as-code-iac-for-aws-eks-cluster-provisioning-using-terraform-95ce0d0a890f" target="_blank" rel="noopener"><span class="title">Infrastructure as Code for AWS EKS Cluster Provisioning using Terraform</span><span class="when">Jul 18, 2024 · Medium</span></a></li>
+          <li><a href="https://medium.com/@carl-writes/text-detection-and-recognition-with-ocr-and-opencv-dc8e5e164d78" target="_blank" rel="noopener"><span class="title">Text Detection and Recognition with OCR and OpenCV</span><span class="when">Feb 11, 2024 · Medium</span></a></li>
+          <li><a href="https://medium.com/@carl-writes/optical-character-recognition-ocr-2115d262a32c" target="_blank" rel="noopener"><span class="title">An Introduction to Optical Character Recognition (OCR)</span><span class="when">Feb 5, 2024 · Medium</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" id="contact">
+      <div class="wrap">
+        <p class="kicker">07 · Contact</p>
+        <h2>Collaborations, clinical speech, low-resource ASR — write.</h2>
+        <a class="mail" href="mailto:anshumanmishra274@gmail.com">anshumanmishra274@gmail.com</a>
+        <div class="btn-row">
+          <a class="btn btn-secondary" href="https://github.com/REDFLAG-bugs" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/iamanshumanmishra/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://huggingface.co/Minutor" target="_blank" rel="noopener">Hugging Face ↗</a>
+          <a class="btn btn-secondary" href="https://x.com/Snapanshu" target="_blank" rel="noopener">X ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <p class="copy">© 2026 Anshuman Mishra</p>
+      <p>SPIRE Lab · IISc Bangalore · speech, still in the wild.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
